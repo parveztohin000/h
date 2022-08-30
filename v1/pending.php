@@ -45,9 +45,9 @@
         $userid =  $_GET['approve_user'];
         $upd = "UPDATE users SET status='active' WHERE id=$userid";
         if ($connect->query($upd) === TRUE) {
-            return  $hyper->redirect_to("./pending?message=user_approved&success=approved");
+            return  $hyper->redirect_to("./pending.php?message=user_approved&success=approved");
         } else {
-            return $hyper->redirect_to("./pending?message=error_ocurred&error=" . $connect->error);
+            return $hyper->redirect_to("./pending.php?message=error_ocurred&error=" . $connect->error);
         }
         $connect->close();
     }
@@ -56,9 +56,9 @@
         $userid =  $_GET['delete_user'];
         $upd = "DELETE FROM users WHERE id=$userid";
         if ($connect->query($upd) === TRUE) {
-            return  $hyper->redirect_to("./pending?message=user_deleted&success=deleted");
+            return  $hyper->redirect_to("./pending.php?message=user_deleted&success=deleted");
         } else {
-            return $hyper->redirect_to("./pending?message=error_ocurred&error=" . $connect->error);
+            return $hyper->redirect_to("./pending.php?message=error_ocurred&error=" . $connect->error);
         }
         $connect->close();
     }
@@ -72,7 +72,7 @@
                     <article class="uk-article">
                         <h1 class="uk-article-title">Pending Users</h1>
                         <div class="uk-article-content">
-                            <p class="uk-text-lead uk-text-muted">If you want to see currunt active users then check <a href="./active?_utm_source=pending" class="access_link">here</a></p>
+                            <p class="uk-text-lead uk-text-muted">If you want to see currunt active users then check <a href="./active.php?_utm_source=pending" class="access_link">here</a></p>
                             <?php
 
                             if ($hyper->get_parameter("message", "user_approved")) {
@@ -115,9 +115,9 @@
                                     while ($users = mysqli_fetch_assoc($myconnect)) { ?>
                                         <p class="uk-margin-small-top user_line"><?php echo $users['username']; ?>
 
-                                            <a class="apb" href="<?php echo "./pending?approve_user=" . $users['id'] . "&approve=true"; ?>">Approve</a>
+                                            <a class="apb" href="<?php echo "./pending.php?approve_user=" . $users['id'] . "&approve=true"; ?>">Approve</a>
 
-                                            <a class="dap" style="color:#804100;" href="<?php echo "./pending?delete_user=" . $users['id'] . "&delete=true"; ?>">Delete</a>
+                                            <a class="dap" style="color:#804100;" href="<?php echo "./pending.php?delete_user=" . $users['id'] . "&delete=true"; ?>">Delete</a>
                                         </p>
 
                                     <?php

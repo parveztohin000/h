@@ -16,14 +16,14 @@ if (isset($_SESSION['username'])) {
 	  <div class="uk-container">
 	    <div data-uk-navbar>
 	      <div class="uk-navbar-left">
-	        <a class="uk-navbar-item uk-logo uk-visible@m" href="index.html">Flex</a>
+	        <a class="uk-navbar-item uk-logo uk-visible@m" href="index.html">Parvez On flex</a>
 	        <a class="uk-navbar-toggle uk-hidden@m" href="#offcanvas-docs" data-uk-toggle><span
 	          data-uk-navbar-toggle-icon></span>
                <!-- <span class="uk-margin-small-left">Articles</span> -->
             </a>
 	      </div>
 	      <div class="uk-navbar-center uk-hidden@m">
-	        <a class="uk-navbar-item uk-logo" href="index.html">Flex</a>
+	        <a class="uk-navbar-item uk-logo" href="index.html">Parvez On Flex</a>
 	      </div>
 	      <div class="uk-navbar-right">
 	        <ul class="uk-navbar-nav uk-visible@m">
@@ -37,9 +37,9 @@ if (isset($_SESSION['username'])) {
 	          <li>
 	            <div class="uk-navbar-item">
                 <?php if($userLogged === true) { ?>
-	              <a class="uk-button uk-button-small uk-button-primary-outline logoutbtn" href="./logout?destroy=sesssion_destroy">Logout</a>
+	              <a class="uk-button uk-button-small uk-button-primary-outline logoutbtn" href="./logout.php?destroy=sesssion_destroy">Logout</a>
 	            <?php } else { ?>
-                    <a class="uk-button uk-button-small uk-button-primary-outline" href="./create?new_user=true">Join</a>
+                    <a class="uk-button uk-button-small uk-button-primary-outline" href="./create.php?new_user=true">Join</a>
                     <?php } ?>
                 </div>
 	          </li>

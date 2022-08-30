@@ -6,8 +6,8 @@
     <button class="uk-offcanvas-close" type="button" data-uk-close></button>
     <h5 class="uk-margin-top">Contact us</h5>
     <ul class="uk-nav uk-nav-default doc-nav">
-      <li class="uk-active"><a href="https://t.me/hyper_chats">Join Group</a></li>
-      <li><a href="https://t.me/hyper_chats">Join Channel</a></li>
+      <li class="uk-active"><a href="https://t.me/modbyparvez1">Join Group</a></li>
+      <li><a href="https://t.me/modbyparvez">Join Channel</a></li>
     </ul>
   
   </div>
@@ -26,7 +26,7 @@
       </li>
       <?php } else { ?>
         <li>
-        <div class="uk-navbar-item"><a class="uk-button uk-button-primary logoutbtn" href="./logout?seession_destroy=true">Logout</a></div>
+        <div class="uk-navbar-item"><a class="uk-button uk-button-primary logoutbtn" href="./logout.php?seession_destroy=true">Logout</a></div>
       </li>
 
         <?php } ?>
@@ -78,6 +78,6 @@
 			</div>
 		</div>
 		<div class="uk-margin-medium uk-text-small uk-link-muted">Crafted by <a  
-				href="https://drifter.works/">HYPERBISWA</a></div>
+				href="https://t.me/parvezonfire2/">ParvezOnFire</a></div>
 	</div>
 </footer>

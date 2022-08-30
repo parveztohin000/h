@@ -1,11 +1,11 @@
 <h3 class="mtitle" > Hello, <span class="tag_success">Admin</span></h3>
         
-                <p class="uk-text-lead uk-text-muted">Back to dashboard <a href="./dashboard?utm_source=gates" class="access_link">here</a></p>
+                <p class="uk-text-lead uk-text-muted">Back to dashboard <a href="./dashboard.php?utm_source=gates" class="access_link">here</a></p>
     
               
 <!-- card one  -->
 <div class="uk-card uk-card-category hyper_mt uk-card-default uk-card-hover uk-card-body uk-inline uk-border-rounded uk-width-1-1">
-                <a class="uk-position-cover" href="./skchecker"></a>
+                <a class="uk-position-cover" href="./skchecker.php"></a>
                
                 <div class="uk-article-meta uk-flex uk-flex-middle">
                  
@@ -19,7 +19,7 @@
               </div>
               <!-- card two  -->
               <div class="uk-card uk-card-category hyper_mt uk-card-default uk-card-hover uk-card-body uk-inline uk-border-rounded uk-width-1-1">
-                <a class="uk-position-cover" href="./checker"></a>
+                <a class="uk-position-cover" href="./checker.php"></a>
                
                 <div class="uk-article-meta uk-flex uk-flex-middle">
                   <div class="uk-border-circle uk-avatar-small s_logo" ></div>

@@ -55,11 +55,11 @@
                         </h1>
                         <div class="uk-article-content">
                             <?php if ($_SESSION['roles'] === 'admin') { ?>
-                                <p class="uk-text-lead uk-text-muted">Manage your gates & settings <a href="./gates?utm_source=dashboard" class="access_link">here</a></p>
+                                <p class="uk-text-lead uk-text-muted">Manage your gates & settings <a href="./gates.php?utm_source=dashboard" class="access_link">here</a></p>
                                
                                 <!-- card one  -->
                                 <!-- <div class="uk-card uk-card-category hyper_mt uk-card-default uk-card-hover uk-card-body uk-inline uk-border-rounded uk-width-1-1">
-                                    <a class="uk-position-cover" href="./gates"></a>
+                                    <a class="uk-position-cover" href="./gates.php"></a>
 
                                     <div class="uk-article-meta uk-flex uk-flex-middle">
 
@@ -73,7 +73,7 @@
                                 </div> -->
                                 <!-- card one  -->
                                 <div class="uk-card uk-card-category hyper_mt uk-card-default uk-card-hover uk-card-body uk-inline uk-border-rounded uk-width-1-1">
-                                    <a class="uk-position-cover" href="./addsk?add_new=true"></a>
+                                    <a class="uk-position-cover" href="./addsk.php?add_new=true"></a>
 
                                     <div class="uk-article-meta uk-flex uk-flex-middle">
 
@@ -88,7 +88,7 @@
 
                                 <!-- card one  -->
                                 <div class="uk-card uk-card-category hyper_mt uk-card-default uk-card-hover uk-card-body uk-inline uk-border-rounded uk-width-1-1">
-                                    <a class="uk-position-cover" href="./pending"></a>
+                                    <a class="uk-position-cover" href="./pending.php"></a>
 
                                     <div class="uk-article-meta uk-flex uk-flex-middle">
 
@@ -103,7 +103,7 @@
 
                                  <!-- card one  -->
                                  <div class="uk-card uk-card-category hyper_mt uk-card-default uk-card-hover uk-card-body uk-inline uk-border-rounded uk-width-1-1">
-                                    <a class="uk-position-cover" href="./bans"></a>
+                                    <a class="uk-position-cover" href="./active.php"></a>
 
                                     <div class="uk-article-meta uk-flex uk-flex-middle">
 

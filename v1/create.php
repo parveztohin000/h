@@ -17,14 +17,14 @@
   $myip = $hyper->get_user_ip();
   if(isset($_SESSION['username'])){
     $userLogged = true;
-      header("location: ./dashboard?source_utm=create_user");
+      header("location: ./dashboard.php?source_utm=create_user");
     
   }
   
   $message ="";
   if(isset($_POST['create_token'])){
     $username = $_POST['username'];
-    $password = 'hyper-'.md5($hyper->gen_tok(10));
+    $password = 'ParvezOnFire-'.md5($hyper->gen_tok(10));
 $sel1 = "SELECT * From users where ip='".$hyper->get_user_ip()."'";
 $sel1Done =mysqli_query($connect, $sel1);
 
@@ -38,13 +38,13 @@ $sel1Done =mysqli_query($connect, $sel1);
         $_SESSION['access'] = $password;
         $_SESSION['roles'] = 'user';
         $_SESSION['status'] = 'inactive';
-        $hyper->redirect_to("./dashboard?_user_created=true&show_welcome=true&is_account_active=false");
+        $hyper->redirect_to("./dashboard.php?_user_created=true&show_welcome=true&is_account_active=false");
     } else {
-      header("location: ./create?message=user_err&-user_created=false");
+      header("location: ./create.php?message=user_err&-user_created=false");
       
     }
 }else {
-    $hyper->redirect_to("./create?_user_created=false&message=ip_already_exists");
+    $hyper->redirect_to("./create.php?_user_created=false&message=ip_already_exists");
 }
 
     $connect->close();

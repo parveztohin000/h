@@ -48,7 +48,7 @@
     if (isset($_POST['addsk'])) {
         $sk = $_POST['sk_input'];
         if (!startsWith($sk, "sk_live")) {
-            header("location:./addsk?message=sk_invalid");
+            header("location:./addsk.php?message=sk_invalid");
         } else {
             file_put_contents('../api/sks_usd.txt', $sk . PHP_EOL, FILE_APPEND | LOCK_EX);
             header("location:./addsk?message=added_sk");

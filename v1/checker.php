@@ -22,7 +22,7 @@ if (isset($_SESSION['username'])) {
   }
 }
 if($is_active === false){
-  return header("location: ./dashboard?message=account_not_active");
+  return header("location: ./dashboard.php?message=account_not_active");
 }
 if ($userLogged !== true) {
   return header("location: ./?message=user_not_logged");

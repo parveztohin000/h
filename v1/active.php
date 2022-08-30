@@ -45,9 +45,9 @@ if (isset($_GET['disapprove_user'])) {
     $userid =  $_GET['disapprove_user'];
     $upd = "UPDATE users SET status='inactive' WHERE id=$userid";
     if ($connect->query($upd) === TRUE) {
-        return  $hyper->redirect_to("./active?message=user_disapproved&success=disapproved");
+        return  $hyper->redirect_to("./active.php?message=user_disapproved&success=disapproved");
     } else {
-        return $hyper->redirect_to("./active?message=error_ocurred&error=" . $connect->error);
+        return $hyper->redirect_to("./active.php?message=error_ocurred&error=" . $connect->error);
     }
     $connect->close();
 }
@@ -61,7 +61,7 @@ if (isset($_GET['disapprove_user'])) {
         <article class="uk-article">
           <h1 class="uk-article-title">Active Users</h1>
           <div class="uk-article-content">
-            <p class="uk-text-lead uk-text-muted">If you want to see current pending users then check <a href="./pending" class="access_link">here</a></p>
+            <p class="uk-text-lead uk-text-muted">If you want to see current pending users then check <a href="./pending.php" class="access_link">here</a></p>
             <?php
              if ($hyper->get_parameter("message", "user_disapproved")) {
                                 
@@ -91,7 +91,7 @@ if (isset($_GET['disapprove_user'])) {
                   while($users = mysqli_fetch_assoc($myconnect)){ ?>
               <p class="uk-margin-small-top user_line">
                 <?php echo $users['username']; ?> 
-                <a class="dap" style="color:#804100;" href="<?php echo "./active?disapprove_user=" . $users['id'] . "&disapprove=true"; ?>">Disapprove</a></p>
+                <a class="dap" style="color:#804100;" href="<?php echo "./active.php?disapprove_user=" . $users['id'] . "&disapprove=true"; ?>">Disapprove</a></p>
 
             
             <?php

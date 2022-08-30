@@ -19,7 +19,7 @@
         $userLogged = true;
     }
     if ($userLogged === true) {
-        return header("location: ./dashboard");
+        return header("location: ./dashboard.php");
     }
     if (isset($_POST['login'])) {
         $password = $_POST['access'];
@@ -40,7 +40,7 @@
                 $_SESSION['access'] = $user['password'];
                 $_SESSION['roles'] = $user['roles'];
                 $connect->close();
-                header("location: ./dashboard?success=user_logged&auth_token=tok_" . $hyper->toLowercase($hyper->gen_tok(30)) . "");
+                header("location: ./dashboard.php?success=user_logged&auth_token=tok_" . $hyper->toLowercase($hyper->gen_tok(30)) . "");
             }
         }
     }
@@ -92,7 +92,7 @@
                             }
 
                             ?>
-                            <p class="uk-text-lead uk-text-muted">dont have access code create <a href="./create" class="access_link">here</a></p>
+                            <p class="uk-text-lead uk-text-muted">dont have access code create <a href="./create.php" class="access_link">here</a></p>
                             <form class="uk-form-stacked uk-margin-medium-top" method="POST" action="">
                                 <div class="uk-margin-bottom">
                                     <label class="uk-form-label" for="name">Secret Code</label>
