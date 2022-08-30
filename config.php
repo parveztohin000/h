@@ -2,10 +2,10 @@
 
 use Hyper\Hyper;
 
-$host = "127.0.0.1";
-$username = "root";
-$password = "";
-$database = "hyper";
+$host = "remotemysql.com:3306";
+$username = "JCGWYqJ9jz";
+$password = "cdRIfn8Sxb";
+$database = "JCGWYqJ9jz";
 $con_status = "inactive";
 
 $connect = new mysqli($host, $username, $password, $database);
